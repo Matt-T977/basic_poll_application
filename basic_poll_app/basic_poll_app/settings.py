@@ -75,8 +75,15 @@ WSGI_APPLICATION = 'basic_poll_app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mysql.connector.django',
+        'NAME': 'basic_poll_database',
+        'USER': 'root',
+        'PASSWORD': 'P)O(i8u7y6',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'OPTIONS': {
+            'autocommit' : True
+        }
     }
 }
 
